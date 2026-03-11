@@ -1,5 +1,6 @@
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
+const siteHeader = document.getElementById("siteHeader");
 
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener("click", () => {
@@ -19,6 +20,16 @@ if (menuToggle && mobileMenu) {
   });
 }
 
+window.addEventListener("scroll", () => {
+  if (!siteHeader) return;
+
+  if (window.scrollY > 20) {
+    siteHeader.classList.add("scrolled");
+  } else {
+    siteHeader.classList.remove("scrolled");
+  }
+});
+
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach((item) => {
@@ -34,5 +45,28 @@ faqItems.forEach((item) => {
     }
   });
 });
+
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.14,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("in-view"));
+}
 
 console.log("RUN Urban Ignite landing page loaded");

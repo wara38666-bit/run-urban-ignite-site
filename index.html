@@ -15,10 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wara38666-bit.github.io/run-urban-ignite-site/" />
   <meta property="og:title" content="RUN Urban Ignite 2026 | Night Run Event" />
-  <meta
-    property="og:description"
-    content="Feel the heat. Chase the pace. Own the night."
-  />
+  <meta property="og:description" content="Feel the heat. Chase the pace. Own the night." />
   <meta
     property="og:image"
     content="https://wara38666-bit.github.io/run-urban-ignite-site/assets/og-cover.jpg"
@@ -30,7 +27,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="siteHeader">
     <div class="container header-wrap">
       <a href="#" class="logo-link" aria-label="RUN Urban Ignite home">
         <img
@@ -42,6 +39,7 @@
 
       <nav class="nav desktop-nav">
         <a href="#about">About</a>
+        <a href="#why-join">Why Join</a>
         <a href="#categories">Categories</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -59,6 +57,7 @@
     <div class="mobile-menu" id="mobileMenu">
       <nav class="mobile-nav">
         <a href="#about">About</a>
+        <a href="#why-join">Why Join</a>
         <a href="#categories">Categories</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -76,46 +75,38 @@
     <div class="hero-glow hero-glow-2"></div>
 
     <div class="container hero-content">
-      <p class="eyebrow">URBAN NIGHT RUN EXPERIENCE</p>
-      <h1>RUN<br>URBAN IGNITE<br>2026</h1>
-      <p class="hero-text">
-        Feel the energy of the city lights, challenge yourself, and join the most exciting urban run event of the year.
-      </p>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">URBAN NIGHT RUN EXPERIENCE</p>
+        <h1>RUN<br>URBAN IGNITE<br>2026</h1>
+        <p class="hero-text">
+          Feel the heat. Chase the pace. Own the night.
+        </p>
 
-      <div class="hero-buttons">
-        <a
-          href="https://example.com/register"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          Register Now
-        </a>
+        <div class="hero-buttons">
+          <a
+            href="https://example.com/register"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Register Now
+          </a>
 
-        <a href="#categories" class="btn btn-secondary">View Categories</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="stat-number">5K / 10K</span>
-          <span class="stat-label">Race Format</span>
-        </div>
-        <div class="hero-stat">
-          <span class="stat-number">Night Run</span>
-          <span class="stat-label">City Experience</span>
-        </div>
-        <div class="hero-stat">
-          <span class="stat-number">2026</span>
-          <span class="stat-label">Main Event</span>
+          <a href="#about" class="btn btn-secondary">Explore Event</a>
         </div>
       </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="scroll-mouse"></span>
+        <span class="scroll-text">Scroll</span>
+      </a>
     </div>
   </section>
 
   <section id="about" class="section about-section">
     <div class="container">
       <div class="about-grid">
-        <div class="about-copy">
+        <div class="about-copy reveal">
           <p class="section-tag">ABOUT THE EVENT</p>
           <h2>Run Beyond The Ordinary</h2>
           <p class="about-lead">
@@ -129,7 +120,7 @@
           </p>
         </div>
 
-        <div class="about-panel">
+        <div class="about-panel reveal reveal-delay-1">
           <div class="about-panel-grid">
             <div class="about-stat-card">
               <span class="about-stat-number">3</span>
@@ -156,9 +147,41 @@
     </div>
   </section>
 
-  <section id="categories" class="section dark-section">
+  <section id="why-join" class="section dark-section why-section">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
+        <p class="section-tag">WHY JOIN?</p>
+        <h2>More Than Just A Race</h2>
+        <p class="section-subtext">
+          Built for runners who want challenge, atmosphere, and a memorable night event.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon">01</div>
+          <h3>Immersive Night Atmosphere</h3>
+          <p>Dark visuals, city energy, motion, and lights create a premium event mood from start to finish.</p>
+        </div>
+
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon">02</div>
+          <h3>Strong Visual Identity</h3>
+          <p>A race experience designed to feel modern, bold, and instantly memorable across every section.</p>
+        </div>
+
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon">03</div>
+          <h3>Challenge For Every Pace</h3>
+          <p>Whether you are chasing your first finish or a stronger pace, Urban Ignite gives you a category to own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="section-head reveal">
         <p class="section-tag">RACE DIVISIONS</p>
         <h2>Categories</h2>
         <p class="section-subtext">
@@ -167,21 +190,21 @@
       </div>
 
       <div class="card-grid category-grid">
-        <div class="card category-card">
+        <div class="card category-card reveal">
           <div class="category-icon">5K</div>
           <h3>5K Urban Dash</h3>
           <p>Fast, fun, and perfect for beginner to intermediate runners.</p>
           <span class="category-meta">Beginner Friendly</span>
         </div>
 
-        <div class="card category-card featured-card">
+        <div class="card category-card featured-card reveal reveal-delay-1">
           <div class="category-icon">10K</div>
           <h3>10K Ignite Run</h3>
           <p>A stronger challenge for runners who want to push harder and go further.</p>
           <span class="category-meta">Most Popular</span>
         </div>
 
-        <div class="card category-card">
+        <div class="card category-card reveal reveal-delay-2">
           <div class="category-icon">N</div>
           <h3>Night Challenge</h3>
           <p>Run through neon-lit city energy, music, lights, and an unforgettable atmosphere.</p>
@@ -191,8 +214,8 @@
     </div>
   </section>
 
-  <section id="register" class="section">
-    <div class="container cta-box">
+  <section id="register" class="section cta-section">
+    <div class="container cta-box reveal">
       <h2>Ready to Join?</h2>
       <p>Secure your spot and be part of RUN Urban Ignite 2026.</p>
       <a
@@ -208,10 +231,12 @@
 
   <section id="faq" class="section dark-section">
     <div class="container">
-      <h2>FAQ</h2>
+      <div class="reveal">
+        <h2>FAQ</h2>
+      </div>
 
       <div class="faq-list">
-        <div class="faq-item active">
+        <div class="faq-item active reveal">
           <button class="faq-question" type="button">
             <span>When is the event?</span>
             <span class="faq-icon">+</span>
@@ -221,7 +246,7 @@
           </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal reveal-delay-1">
           <button class="faq-question" type="button">
             <span>Where is the location?</span>
             <span class="faq-icon">+</span>
@@ -231,7 +256,7 @@
           </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal reveal-delay-2">
           <button class="faq-question" type="button">
             <span>How do I register?</span>
             <span class="faq-icon">+</span>
@@ -253,6 +278,7 @@
 
       <div class="footer-links">
         <a href="#about">About</a>
+        <a href="#why-join">Why Join</a>
         <a href="#categories">Categories</a>
         <a href="#faq">FAQ</a>
       </div>
