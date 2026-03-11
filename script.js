@@ -69,4 +69,4 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("in-view"));
 }
 
-console.log("RUN Urban Ignite hype sports urban theme loaded");
+console.log("RUN Urban Ignite cinematic showcase theme loaded");
