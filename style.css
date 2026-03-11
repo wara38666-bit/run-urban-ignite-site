@@ -69,11 +69,12 @@ video {
 }
 
 .header-wrap {
-  min-height: 82px;
+  min-height: 74px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  position: relative;
 }
 
 .logo-link {
@@ -110,6 +111,7 @@ video {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-left: auto;
 }
 
 .header-btn {
@@ -212,7 +214,7 @@ video {
 /* HERO */
 .hero {
   position: relative;
-  min-height: calc(100vh - 82px);
+  min-height: calc(100vh - 74px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -684,6 +686,10 @@ video {
 
   .menu-toggle {
     display: inline-flex;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .container {
@@ -692,10 +698,21 @@ video {
 
   .header-wrap {
     min-height: 74px;
+    padding-right: 56px;
+  }
+
+  .logo-link {
+    position: relative;
+    z-index: 2;
   }
 
   .logo-image {
     width: 74px;
+  }
+
+  .header-actions {
+    position: static;
+    margin-left: 0;
   }
 
   .hero {
