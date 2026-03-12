@@ -2,12 +2,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 
-/* MOBILE MENU */
-
-const menuToggle = document.getElementById("menuToggle")
+const hamburger = document.getElementById("hamburger")
 const mobileMenu = document.getElementById("mobileMenu")
 
-menuToggle.addEventListener("click",()=>{
+hamburger.addEventListener("click",()=>{
 
 mobileMenu.style.display =
 mobileMenu.style.display === "flex"
@@ -31,40 +29,30 @@ mobileMenu.style.display="none"
 
 
 
-/* HERO PARALLAX */
-
-gsap.to(".hero-video",{
-
-yPercent:20,
-ease:"none",
-
-scrollTrigger:{
-trigger:".hero",
-start:"top top",
-end:"bottom top",
-scrub:true
-}
-
-})
-
-
-
-/* SECTION SCROLL MOTION */
-
 gsap.utils.toArray(".section").forEach((section)=>{
 
-gsap.from(section,{
+gsap.from(section.querySelector(".content"),{
 
+y:80,
 opacity:0,
-y:120,
+duration:1,
 
 scrollTrigger:{
 trigger:section,
-start:"top 80%",
-end:"top 40%",
-scrub:true
+start:"top 75%",
+toggleActions:"play reverse play reverse"
 }
 
 })
+
+})
+
+
+
+gsap.from(".hero-content",{
+
+y:80,
+opacity:0,
+duration:1.5
 
 })
