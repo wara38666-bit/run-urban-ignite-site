@@ -10,13 +10,10 @@
 
 <link rel="stylesheet" href="style.css">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
 </head>
 
-<body>
 
+<body>
 
 <header class="header">
 
@@ -24,19 +21,22 @@
 
 <img src="assets/logo-run-urban-ignite.png" class="logo">
 
+<div class="nav-desktop">
 
-<nav class="nav-desktop">
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#categories">Categories</a>
-<a href="#faq">FAQ</a>
-</nav>
+<a href="#">About</a>
+<a href="#">Experience</a>
+<a href="#">Categories</a>
+<a href="#">FAQ</a>
+
+</div>
 
 
 <div class="hamburger" id="hamburger">
+
 <span></span>
 <span></span>
 <span></span>
+
 </div>
 
 </div>
@@ -44,10 +44,10 @@
 
 <div class="mobile-menu" id="mobileMenu">
 
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#categories">Categories</a>
-<a href="#faq">FAQ</a>
+<a href="#">About</a>
+<a href="#">Experience</a>
+<a href="#">Categories</a>
+<a href="#">FAQ</a>
 
 </div>
 
@@ -55,24 +55,23 @@
 
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <video autoplay muted loop playsinline class="hero-video">
-<source src="assets/video/run-hero.mp4" type="video/mp4">
+
+<source src="assets/video/run.mp4">
+
 </video>
 
-<div class="hero-overlay"></div>
+<div class="overlay"></div>
 
 <div class="hero-content">
 
-<p class="hero-tag">
-URBAN NIGHT RUN EXPERIENCE
-</p>
+<p class="hero-tag">URBAN NIGHT RUN EXPERIENCE</p>
 
-<h1>
-RUN URBAN<br>
-IGNITE 2026
-</h1>
+<h1>RUN URBAN IGNITE 2026</h1>
 
 <p>
 A cinematic city run built with lights, energy and unforgettable night atmosphere.
@@ -82,7 +81,7 @@ A cinematic city run built with lights, energy and unforgettable night atmospher
 
 <a class="btn-primary">Register Now</a>
 
-<a href="#about" class="btn-outline">Explore</a>
+<a class="btn-outline">Explore</a>
 
 </div>
 
@@ -92,7 +91,9 @@ A cinematic city run built with lights, energy and unforgettable night atmospher
 
 
 
-<section id="about" class="section">
+<!-- SECTION 1 -->
+
+<section class="section bg-runner">
 
 <div class="content">
 
@@ -108,7 +109,9 @@ RUN Urban Ignite is a high-energy urban night run designed for modern city runne
 
 
 
-<section id="experience" class="section">
+<!-- SECTION 2 -->
+
+<section class="section bg-city">
 
 <div class="content">
 
@@ -124,7 +127,9 @@ Feel the power of running with music, lights and city atmosphere.
 
 
 
-<section id="categories" class="section">
+<!-- SECTION 3 -->
+
+<section class="section bg-race">
 
 <div class="content">
 
@@ -138,9 +143,11 @@ Feel the power of running with music, lights and city atmosphere.
 
 
 
+<!-- FINAL CTA -->
+
 <section class="cta">
 
-<div class="content">
+<div class="cta-box">
 
 <h2>Feel The Heat. Chase The Pace.</h2>
 
@@ -148,12 +155,11 @@ Feel the power of running with music, lights and city atmosphere.
 Secure your place and be part of the next RUN Urban Ignite experience.
 </p>
 
-<a class="btn-primary">Register Now</a>
+<a class="btn-primary big">Register Now</a>
 
 </div>
 
 </section>
-
 
 
 <footer class="footer">

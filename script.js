@@ -1,58 +1,32 @@
-gsap.registerPlugin(ScrollTrigger)
-
-
-
 const hamburger = document.getElementById("hamburger")
 const mobileMenu = document.getElementById("mobileMenu")
 
-hamburger.addEventListener("click",()=>{
+hamburger.onclick = () => {
 
 mobileMenu.style.display =
 mobileMenu.style.display === "flex"
 ? "none"
 : "flex"
 
-})
+}
 
+/* SCROLL REVEAL */
 
+const sections = document.querySelectorAll(".section")
 
-document.querySelectorAll(".mobile-menu a")
-.forEach(link=>{
+window.addEventListener("scroll",()=>{
 
-link.addEventListener("click",()=>{
+sections.forEach(section=>{
 
-mobileMenu.style.display="none"
+const rect = section.getBoundingClientRect()
 
-})
+if(rect.top < window.innerHeight * .75){
 
-})
+section.style.opacity = 1
+section.style.transform = "translateY(0)"
 
-
-
-gsap.utils.toArray(".section").forEach((section)=>{
-
-gsap.from(section.querySelector(".content"),{
-
-y:80,
-opacity:0,
-duration:1,
-
-scrollTrigger:{
-trigger:section,
-start:"top 75%",
-toggleActions:"play reverse play reverse"
 }
 
 })
-
-})
-
-
-
-gsap.from(".hero-content",{
-
-y:80,
-opacity:0,
-duration:1.5
 
 })
