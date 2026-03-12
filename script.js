@@ -1,6 +1,5 @@
 const menuToggle = document.getElementById("menuToggle")
 const mobileMenu = document.getElementById("mobileMenu")
-const header = document.getElementById("siteHeader")
 
 
 
@@ -14,8 +13,6 @@ mobileMenu.style.display === "flex"
 })
 
 
-
-/* CLOSE MENU WHEN CLICK LINK */
 
 document.querySelectorAll(".mobile-menu a")
 .forEach(link=>{
@@ -32,7 +29,7 @@ mobileMenu.style.display="none"
 
 /* SCROLL REVEAL */
 
-const revealItems = document.querySelectorAll(".reveal")
+const reveals = document.querySelectorAll(".reveal")
 
 const observer = new IntersectionObserver(
 
@@ -42,22 +39,24 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.classList.add("in-view")
+entry.target.classList.add("show")
 
 }else{
 
-entry.target.classList.remove("in-view")
+entry.target.classList.remove("show")
 
 }
 
 })
 
 },
-{threshold:.2}
+{
+threshold:0.2
+}
 
 )
 
-revealItems.forEach(el=>observer.observe(el))
+reveals.forEach(el=>observer.observe(el))
 
 
 
@@ -69,6 +68,6 @@ window.addEventListener("scroll",()=>{
 
 const scroll = window.scrollY
 
-hero.style.backgroundPositionY = scroll * .5 + "px"
+hero.style.transform = `translateY(${scroll * 0.1}px)`
 
 })
