@@ -10,7 +10,17 @@ mobileMenu.style.display === "flex"
 
 })
 
+/* HERO PARALLAX */
 
+const hero = document.querySelector(".hero")
+
+window.addEventListener("scroll",()=>{
+
+const scroll = window.scrollY
+
+hero.style.backgroundPositionY = scroll * 0.5 + "px"
+
+})
 
 const revealItems = document.querySelectorAll(".reveal")
 
