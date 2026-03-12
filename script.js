@@ -1,7 +1,11 @@
+gsap.registerPlugin(ScrollTrigger)
+
+
+
+/* MOBILE MENU */
+
 const menuToggle = document.getElementById("menuToggle")
 const mobileMenu = document.getElementById("mobileMenu")
-
-
 
 menuToggle.addEventListener("click",()=>{
 
@@ -27,47 +31,40 @@ mobileMenu.style.display="none"
 
 
 
-/* SCROLL REVEAL */
+/* HERO PARALLAX */
 
-const reveals = document.querySelectorAll(".reveal")
+gsap.to(".hero-video",{
 
-const observer = new IntersectionObserver(
+yPercent:20,
+ease:"none",
 
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show")
-
-}else{
-
-entry.target.classList.remove("show")
-
+scrollTrigger:{
+trigger:".hero",
+start:"top top",
+end:"bottom top",
+scrub:true
 }
 
 })
 
-},
-{
-threshold:0.2
+
+
+/* SECTION SCROLL MOTION */
+
+gsap.utils.toArray(".section").forEach((section)=>{
+
+gsap.from(section,{
+
+opacity:0,
+y:120,
+
+scrollTrigger:{
+trigger:section,
+start:"top 80%",
+end:"top 40%",
+scrub:true
 }
 
-)
-
-reveals.forEach(el=>observer.observe(el))
-
-
-
-/* HERO PARALLAX */
-
-const hero = document.querySelector(".hero")
-
-window.addEventListener("scroll",()=>{
-
-const scroll = window.scrollY
-
-hero.style.transform = `translateY(${scroll * 0.1}px)`
+})
 
 })

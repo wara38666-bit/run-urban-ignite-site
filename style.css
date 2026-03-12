@@ -64,8 +64,6 @@ height:70px;
 width:80px;
 }
 
-
-
 .desktop-nav{
 display:flex;
 gap:25px;
@@ -253,6 +251,42 @@ border-radius:40px;
 padding:120px 20px;
 text-align:center;
 
+position:relative;
+
+}
+
+
+
+/* LIGHT SWEEP EFFECT */
+
+.section::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:200%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,120,0,.12),
+transparent
+);
+
+animation:sweep 10s linear infinite;
+
+}
+
+@keyframes sweep{
+
+0%{transform:translateX(-40%)}
+100%{transform:translateX(40%)}
+
 }
 
 
@@ -300,26 +334,6 @@ margin-bottom:30px;
 padding:40px;
 text-align:center;
 background:#06080c;
-
-}
-
-
-
-/* SCROLL REVEAL */
-
-.reveal{
-
-opacity:0;
-transform:translateY(40px);
-
-transition:.7s;
-
-}
-
-.reveal.show{
-
-opacity:1;
-transform:none;
 
 }
 
