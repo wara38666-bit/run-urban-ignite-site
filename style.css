@@ -1,3 +1,10 @@
+a{
+
+text-decoration:none;
+color:inherit;
+
+}
+
 *{
 margin:0;
 padding:0;
@@ -102,9 +109,35 @@ padding:20px;
 
 }
 
+/* MOBILE MENU TEXT COLOR */
+
 .mobile-menu a{
-padding:10px 0;
-border-bottom:1px solid #222;
+
+color:#ffffff;
+text-decoration:none;
+font-size:16px;
+padding:16px 0;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+transition:0.3s;
+
+}
+
+/* hover effect */
+
+.mobile-menu a:hover{
+
+color:#ff7a00;
+
+}
+
+/* visited link fix */
+
+.mobile-menu a:visited{
+
+color:#ffffff;
+
 }
 
 
@@ -193,9 +226,21 @@ border-radius:30px;
 
 .btn-secondary{
 
-border:1px solid white;
+border:1px solid rgba(255,255,255,0.8);
 padding:14px 24px;
 border-radius:30px;
+
+color:white;
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+.btn-secondary:hover{
+
+background:white;
+color:#111;
 
 }
 
