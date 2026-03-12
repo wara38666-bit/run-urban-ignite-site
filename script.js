@@ -1,5 +1,8 @@
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
+const menuToggle = document.getElementById("menuToggle")
+const mobileMenu = document.getElementById("mobileMenu")
+const header = document.getElementById("siteHeader")
+
+
 
 menuToggle.addEventListener("click",()=>{
 
@@ -10,17 +13,24 @@ mobileMenu.style.display === "flex"
 
 })
 
-/* HERO PARALLAX */
 
-const hero = document.querySelector(".hero")
 
-window.addEventListener("scroll",()=>{
+/* CLOSE MENU WHEN CLICK LINK */
 
-const scroll = window.scrollY
+document.querySelectorAll(".mobile-menu a")
+.forEach(link=>{
 
-hero.style.backgroundPositionY = scroll * 0.5 + "px"
+link.addEventListener("click",()=>{
+
+mobileMenu.style.display="none"
 
 })
+
+})
+
+
+
+/* SCROLL REVEAL */
 
 const revealItems = document.querySelectorAll(".reveal")
 
@@ -43,11 +53,22 @@ entry.target.classList.remove("in-view")
 })
 
 },
-
-{
-threshold:0.2
-}
+{threshold:.2}
 
 )
 
 revealItems.forEach(el=>observer.observe(el))
+
+
+
+/* HERO PARALLAX */
+
+const hero = document.querySelector(".hero")
+
+window.addEventListener("scroll",()=>{
+
+const scroll = window.scrollY
+
+hero.style.backgroundPositionY = scroll * .5 + "px"
+
+})
