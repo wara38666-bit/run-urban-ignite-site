@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://wara38666-bit.github.io/run-urban-ignite-site/sitemap.xml
