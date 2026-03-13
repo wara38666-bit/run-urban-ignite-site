@@ -1,3 +1,33 @@
+/* LOAD HEADER */
+
+fetch("components/header.html")
+.then(res => res.text())
+.then(data => {
+
+document.getElementById("header").innerHTML = data
+
+initMenu()
+
+})
+
+
+
+/* LOAD FOOTER */
+
+fetch("components/footer.html")
+.then(res => res.text())
+.then(data => {
+
+document.getElementById("footer").innerHTML = data
+
+})
+
+
+
+/* MENU */
+
+function initMenu(){
+
 const hamburger = document.getElementById("hamburger")
 const mobileMenu = document.getElementById("mobileMenu")
 
@@ -10,13 +40,15 @@ mobileMenu.style.display === "flex"
 
 }
 
+}
+
 
 
 /* REVEAL ANIMATION */
 
 const reveals = document.querySelectorAll(".reveal")
 
-function revealOnScroll(){
+function reveal(){
 
 const trigger = window.innerHeight * 0.8
 
@@ -34,6 +66,6 @@ el.classList.add("active")
 
 }
 
-window.addEventListener("scroll", revealOnScroll)
+window.addEventListener("scroll", reveal)
 
-revealOnScroll()
+reveal()
