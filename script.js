@@ -12,7 +12,7 @@ mobileMenu.style.display === "flex"
 
 
 
-/* SCROLL REVEAL */
+/* REVEAL ANIMATION */
 
 const reveals = document.querySelectorAll(".reveal")
 
