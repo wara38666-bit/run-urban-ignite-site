@@ -10,23 +10,30 @@ mobileMenu.style.display === "flex"
 
 }
 
+
+
 /* SCROLL REVEAL */
 
-const sections = document.querySelectorAll(".section")
+const reveals = document.querySelectorAll(".reveal")
 
-window.addEventListener("scroll",()=>{
+function revealOnScroll(){
 
-sections.forEach(section=>{
+const trigger = window.innerHeight * 0.8
 
-const rect = section.getBoundingClientRect()
+reveals.forEach(el =>{
 
-if(rect.top < window.innerHeight * .75){
+const rect = el.getBoundingClientRect()
 
-section.style.opacity = 1
-section.style.transform = "translateY(0)"
+if(rect.top < trigger){
+
+el.classList.add("active")
 
 }
 
 })
 
-})
+}
+
+window.addEventListener("scroll", revealOnScroll)
+
+revealOnScroll()
